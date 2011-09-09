@@ -3,3 +3,4 @@ local_settings.py
 !.gitignore
 media
 fabfile.py
+wsgi_handler.py
