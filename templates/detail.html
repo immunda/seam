@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% load markup %}
+{% load typogrify_tags %}
+
+{% block content %}
+
+<div class="entry">
+    <h2>{{ post.title|safe|typogrify }}</h2>
+    
+    <p class="date">{{ post.created_at }}</p>
+
+    {{ post.body|safe|typogrify }}
+    
+</div>
+
+{% endblock %}

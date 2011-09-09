@@ -1,0 +1,167 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+ 
+<head> 
+<title>Phil Howell - Frayed at the seam</title> 
+ 
+<meta name="description" content="Personal page of Phil Howell" /> 
+<meta name="keywords" content="Python,developer,nottingham,phil,howell" /> 
+<meta name="author" content="Phil Howell" /> 
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /> 
+ 
+<!-- iPhone compatibility --> 
+<meta name="apple-mobile-web-app-capable" content="yes" /> 
+<meta name="viewport" content="width=device-width, user-scalable=no" /> 
+ 
+<link href='http://fonts.googleapis.com/css?family=Merriweather:light,regular,bold,900&amp;v1' rel='stylesheet' type='text/css'> 
+
+<link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" /> 
+<link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" />
+ 
+<script> 
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21055912-1']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script> 
+ 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.pjax.js"></script>
+ 
+<script> 
+ 
+$(document).ready(function() {
+ 
+  $('#content a, #header a').pjax('#content_inner');
+
+  $('html, body').bind('end.pjax', function() { $('body').animate({scrollTop: 0}, 150)});
+
+  var header = $('#header'),
+      disable_scroll_logic = false;
+      has_run = false;
+ 
+  function setAboutFixed(header_top) { 
+ 
+    if ($('#content').width() < $(window).width()) {
+ 
+    if (has_run === false) {
+ 
+      $('#about').css('position', 'fixed');
+      $('#about').css('top', header_top);
+      has_run = true;
+ 
+    } else {
+ 
+      $('#about').css('top', '');
+      $('#about').css('position', '');
+    }
+ 
+    }
+  }
+ 
+  function resetAbout() {
+ 
+    $('#about').css('position', 'absolute');
+    $('#about').css('top', '');
+    has_run = false;
+ 
+  }
+ 
+  $(window).scroll(function() {
+ 
+    if ($(window).scrollTop() > $('#header').height() && $(window).height() > $('#about').height()) {
+ 
+      if(parseInt($('#about').css('top'), 10) - $('#header').height() > 0 && $('#content').width() < $(window).width()) {
+ 
+        setAboutFixed(parseInt($('#about').css('top'), 10) - $('#header').height());
+ 
+      }
+ 
+    } else if ($('#content').width() < $(window).width()) {
+ 
+      resetAbout();
+ 
+    }
+ 
+  });
+ 
+  var about_offset;
+ 
+  $(window).resize(function() {
+ 
+    if ($('#content').width() < $(window).width() && $(window).scrollTop() > $('#header').height()) {
+ 
+      about_offset = parseInt($('#about').css('top'), 10) - $('#header').height();
+ 
+      has_run = false;
+ 
+      if (about_offset > 0) {
+        setAboutFixed(about_offset);
+      }
+ 
+      has_run = true;
+ 
+    } else {
+ 
+      $('#about').css('top', '');
+      $('#about').css('position', '');
+ 
+    }
+ 
+  });
+ 
+});
+ 
+</script> 
+ 
+</head> 
+ 
+<body> 
+ 
+<div id="header"> 
+<h1><a href="{% url index %}">Seam.</a></h1> 
+</div> 
+ 
+<div id="container"> 
+ 
+<div id="content"> 
+    <div id="content_inner">
+        {% block content %}{% endblock %}
+    </div><!-- // #content_inner --> 
+</div><!-- // #content --> 
+ 
+<div id="about"> 
+    <div id="about_inner"> 
+ 
+        <div id="wisdom"> 
+            <h3>Machine Wisdom</h3> 
+            <p>Q:	What is printed on the bottom of beer bottles in Minnesota?
+A:	Open other end.
+</p> 
+        </div> 
+ 
+        <div id="social"> 
+            <h3>(Anti) Social</h3> 
+            <ul> 
+                <li><a rel="external" href="http://last.fm/user/immunda">Last.fm</a></li> 
+                <li><a rel="external" href="http://twitter.com/immunda">Twitter</a></li> 
+                <li><a rel="external" href="http://www.flickr.com/photos/immunda">Flickr</a></li> 
+                <li>Even <a rel="external" href="http://uk.linkedin.com/pub/phil-howell/13/bb5/70">Linkedin</a></li> 
+           </ul> 
+        </div> 
+        
+    </div><!-- // #about_inner --> 
+</div><!-- // #about --> 
+ 
+</div> 
+ 
+</body> 
+ 
+</html>

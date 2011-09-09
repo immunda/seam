@@ -1,0 +1,276 @@
+/* @override http://localhost/screen.css */
+
+/* @override http://se.am/css/screen.css */
+
+
+/*
+Type-A-File "Kickoff" designed by Russ Maschmeyer, aka StrangeNative.
+http://www.strangenative.com
+@strangenative
+
+Creative Commons License by Attribution. 
+Feel free to take it, adapt it, & use it on both commercial and non-commercial projects.
+*/
+
+/*Pick Your Fonts*/
+
+body, h3, h4, h5, h6 {font-family: "Merriweather", Georgia, serif;}
+h1, h2, .pullquote, blockquote, .sidenote h1, aside h1, .pullquote, .kicker, .drop-cap, .run-in, cite, dt  {font-family: "Merriweather", Georgia, serif;}
+
+/*Size & Vertical Rhythm*/
+body{
+  font-size:87.5%;
+  /*font-size:14px;*/
+  line-height:1.58em;
+}
+
+/*HTML Standard Elements*/
+h1{font-size:3em;line-height:1.333em;margin:.7em 0 0em;} 
+h2{font-size:2em;line-height:1.1em;margin: 0.5em 0 0.5em;}
+img { width: 100%; }
+h1 + img, h2 + img{margin-top: 0.5em;}
+h3{font-size:1.125em;padding-top: 1em;}
+h4{font-weight:bold;font-size:1em;}
+h1, h2, h3, h4, h5, h6{font-weight:700;}
+small{display:block;font-size:.75em;letter-spacing:.05em;margin:2.2em 0 -.2em;font-style:italic;line-height:1.75em;}
+p, ul, ol, form{margin:1.5em 0 1em;}
+ul{list-style-position:outside;list-style-type:disc;line-height:1.5;}
+li{margin-bottom:.75em;}
+ol{list-style-position:outside;list-style-type:decimal;}
+blockquote{font-style:italic;line-height:1.8em;font-size:1em;}
+blockquote:before{font-family:Georgia, serif;content: "“";font-size:2.75em;text-indent:-.75em;margin-top:.1em;float:left;opacity:.3;}
+cite{display:block;text-transform:uppercase;letter-spacing:.2em;margin: 1em 0 1.2em 0;font-size: 0.8em; font-weight:900;}
+cite:before{content:"- ";}
+pre{margin:1.5em 0; overflow: auto; background-color: #eee; padding: 1em;}
+dl{margin:1.45em 0;/*border-top:1px dotted #999;border-bottom:1px dotted #999;*/}
+dt{word-spacing:.2em;border-bottom:1px dotted #999;margin-top:1.5em;font-weight:700;text-transform:uppercase;font-size:.9em;letter-spacing:.2em;padding-bottom:.5em;}
+dt:before{content:"\2767";font-size:1.25em;text-indent:-1.5em;float:left;}
+dd{font-style:italic;font-size:.9em;margin-bottom:1.65em;line-height:1.75em;margin-top:.75em;}
+abbr{text-transform:uppercase;font-size:.9em;letter-spacing:.1em;}
+p {hyphenate: auto;hyphenate-before:2;hyphenate-after:3;hyphenate-lines: 3;orphans:4}
+p span.pullquote{text-indent:0;}
+
+
+code { font-family: Monaco, "Courier New", Courier, mono; font-size: 0.85em;}
+
+
+/*Compositional Elements*/
+.kicker{font-size:1.33em;line-height:1.693em;font-style:italic;margin:-.35em 0 -.35em;}
+.kicker, .pullquote{font-weight:100;}
+.run-in{text-transform:uppercase;font-style:normal;letter-spacing:.15em;font-size:.9em;font-weight:bold;}
+.superscript{font-family:arial, sans-serif;vertical-align:super;font-size:75%;margin-right:.4em;text-transform:lowercase;font-variant:small-caps;letter-spacing:.1em;line-height:0;}
+.subscript{font-family:arial, sans-serif;vertical-align:sub;font-size:75%;margin-right:.4em;text-transform:lowercase;font-variant:small-caps;letter-spacing:.1em;line-height:0em;}
+a.superscript, a.subscript{text-decoration:none;}
+aside, .sidenote{font-size:.83em;font-style:italic;margin-top:1.2em;}
+aside h1, .sidenote h1{text-transform:uppercase;font-size:1em;line-height:1.5em;font-style:normal;letter-spacing:.2em;font-weight:900;}
+aside p, .sidenote p{line-height:1.7em;margin:1.3em 0;font-style:normal;}
+aside ul, aside ol, .sidenote ul, .sidenote ol{margin-top:1.3em;line-height:1.7em;}
+aside ul li, aside ol li, .sidenote ul li, .sidenote ol li{margin-bottom:1.3em;}
+.pullquote{font-style:italic;letter-spacing:.05em;margin:.3em .7em .3em -.5em;padding-top:.15em;line-height:1.5em;display:block;float:left;font-size:2em;width:55%;}
+.pullquote:before {font-family:Georgia, serif;content: "“";font-size:1.5em;text-indent:-.7em;margin-top:.05em;float:left;opacity:.3;}
+.footnote{border-top:1px solid black;font-size:.75em;margin-top:3.5em;}
+.footnote li{margin:1.5em 0 1.5em;word-spacing:.1em;line-height:1.75em;}
+.caption{font-size: 0.85em;font-style:italic;margin: 0 0 1.8em;}
+.kicker .run-in{text-transform:uppercase;font-style:normal;letter-spacing:.25em;font-size:.9em;}
+.drop-cap {display:block;font-style:normal;font-size:5.75em;float:left;margin:.04em .1em 0 0;line-height:.67em;font-weight:700;}
+
+/*Tweaks*/
+.kern{letter-spacing:-.1em;}
+
+
+body {
+  border: none;
+  background-color: #eee;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+
+  max-width: 80em;
+  min-width: 20em;
+  overflow: hidden;
+  /*position: relative;*/
+
+}
+
+#content {
+  float: left;
+  background-color: #fff;
+  padding: 0;
+  width: 70%;
+  -webkit-box-shadow: #ddd 1px 1px 5px;
+  -moz-box-shadow: #ddd 1px 1px 5px;
+  box-shadow: #ddd 1px 1px 5px;
+}
+
+#content_inner {
+
+  padding: 2em 4.5em;
+
+}
+
+#about {
+
+  left: 70%;
+  max-width: 24em;
+  position: absolute;
+  top: 8.6em;
+
+}
+
+#about_inner {
+
+  padding: 0 2em;
+}
+
+
+#about ul li {
+  list-style-type: none;
+}
+
+.date {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+.entry {
+  padding: 0 0 1.5em 0;
+}
+
+.entry h2 {
+  margin-bottom: 0.3em;
+}
+
+.entry:last-child {
+  padding: 0 0 1em 0;
+}
+
+ul {
+  list-style-position: outside;
+  line-height: 1.5em;
+  margin-bottom: 0;
+}
+
+a {
+  color: #98b54e;
+}
+
+a:hover {
+  color: #ffffff;
+  background-color: #98b54e;
+}
+
+a:visited {
+  text-decoration: underline;
+}
+
+a[rel~="external"] {
+  background: url('external.png') no-repeat right 0px;
+  padding-right: 0.95em;
+}
+
+a[rel~="external"]:hover {
+  background: url('external.png') no-repeat right -990px;
+  padding-right: 0.95em;
+  color: #fff;
+  background-color: #98b54e;
+}
+
+#header {
+  background-color: #172322;
+  /*min-width: 480px;*/
+  border-bottom: 0.15em solid #172322;
+  background: #172322 url('pony.png') no-repeat 95% top;
+  /*padding: 0.5em;*/
+}
+
+#header h1 {
+
+  margin: 0;
+/*  color: #fff;*/
+  padding: 0.4em 1.5em 0.3em 1.5em;
+
+}
+
+#header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.entry h2 a {
+  color: #000;
+}
+
+#header h1 a:hover, .entry h2 a:hover {
+  background: none;
+}
+
+/*@media screen and (min-height: 28em) {
+
+  div#about {
+    position: fixed;
+    display:  block;
+    left: 70%;
+  }
+
+}
+*/
+
+@media screen and (min-width: 70em) {
+
+  div#about {
+    left: 56em;
+  }
+
+}
+
+@media screen and (max-width: 40em) {
+
+  #header h1 {
+    padding-left: 1em;
+  }
+
+  div#content_inner {
+    padding: 0 3em;
+  }
+  
+  div#content {
+    width: 100%;
+    min-width: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+    
+  div#about {
+    position: static;
+    clear: both;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    background: #fff;
+
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+
+  div#content {
+    width: 100%;
+    min-width: 0;
+  }
+
+  div#content_inner {
+    padding: 0 3em;
+  }
+
+  div#about {
+    position: static;
+    clear: both;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+}
