@@ -2,7 +2,7 @@
 
 {% for post in all_posts %}
 <div class="entry">
-    <h2><a href="{% url detail post.slug %}">{{ post.title|safe|typogrify }}</a></h2>
+    <h2><a href="{% url 'detail' post.slug %}">{{ post.title|safe|typogrify }}</a></h2>
     
     <p class="date">{{ post.created_at }}</p>
 
