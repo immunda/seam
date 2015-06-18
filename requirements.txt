@@ -1,8 +1,10 @@
-Django==1.5.8
-Markdown==2.0.3
-django-pjax==1.1
-django-typogrify==1.2.2
+Flask==0.10.1
+Flask-Script==2.0.5
+Jinja2==2.7.3
+MarkupSafe==0.23
+Werkzeug==0.10.4
+itsdangerous==0.24
 pymongo==1.11
-smartypants==1.6.0.3
-textile==2.1.5
+smartypants==1.8.6
+typogrify==2.0.7
 wsgiref==0.1.2

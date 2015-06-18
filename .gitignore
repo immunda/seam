@@ -4,6 +4,5 @@ local_settings.py
 media
 fabfile.py
 wsgi_handler.py
-static_collected
 venv/
 dump

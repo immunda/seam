@@ -13,8 +13,8 @@
  
 <link href='http://fonts.googleapis.com/css?family=Merriweather:light,regular,bold,900&amp;v1' rel='stylesheet' type='text/css'> 
 
-<link rel="stylesheet" href="{{ STATIC_URL }}css/reset.css" /> 
-<link rel="stylesheet" href="{{ STATIC_URL }}css/screen.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}" /> 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/screen.css') }}" />
  
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 <script src="{{ STATIC_URL }}js/jquery.pjax.js"></script>
@@ -124,7 +124,7 @@ $(document).ready(function() {
 <body> 
  
 <div id="header"> 
-<h1><a href="{% url 'index' %}">Seam.</a></h1>
+<h1><a href="{{ url_for('main.index') }}">Seam.</a></h1>
 </div> 
  
 <div id="container"> 
@@ -143,7 +143,7 @@ $(document).ready(function() {
             <ul>
               <li>
                 <p>It's not over until it's over.</p>
-                <a href="{% url 'computer' %}">:computer:</a>
+                <a href="{{ url_for('main.computer') }}">:computer:</a>
               </li>
             </ul>
         </div> 
